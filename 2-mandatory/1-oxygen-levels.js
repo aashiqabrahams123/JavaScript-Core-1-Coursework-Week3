@@ -11,7 +11,15 @@
     Some string methods that might help you here are .replace() and .substring(). 
 */
 
-function findSafeOxygenLevel() {}
+function findSafeOxygenLevel(oxygenLevel) {
+  for (i = 0; i < oxygenLevel.Length; i++) {
+    let checkForSafeOxygenLevel = parseFloat(oxygenLevel[i]);
+    let isOxygenLevelSafe = checkForSafeOxygenLevel > 19.5 && checkForSafeOxygenLevel < 23.5;
+    if(isOxygenLevelSafe) {
+      return oxygenLevel[i];
+    }
+  }
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
